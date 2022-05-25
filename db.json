@@ -1,25 +1,25 @@
 {
-    "players": [
-        {
-            "id": 1,
-            "name": "Konrad",
-            "sex": true,
-            "items": 0,
-            "level": 1
-        },
-        {
-            "id": 2,
-            "name": "Ania",
-            "sex": false,
-            "items": 0,
-            "level": 1
-        },
-        {
-            "id": 3,
-            "name": "Boguś",
-            "sex": true,
-            "items": 0,
-            "level": 1
-        }
-    ]
+  "players": [
+    {
+      "id": 1,
+      "name": "Konrad",
+      "sex": true,
+      "items": 1,
+      "level": 6
+    },
+    {
+      "id": 2,
+      "name": "Ania",
+      "sex": false,
+      "items": 0,
+      "level": 3
+    },
+    {
+      "id": 3,
+      "name": "Boguś",
+      "sex": true,
+      "items": 0,
+      "level": 1
+    }
+  ]
 }

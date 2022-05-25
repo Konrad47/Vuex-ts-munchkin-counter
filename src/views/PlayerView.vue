@@ -9,19 +9,24 @@
     >
       <b-card-text>
         <h2>
-          Level: {{ getPlayer.level }} <b-icon icon="file-plus"></b-icon
-          ><b-icon icon="file-minus"></b-icon>
+          Level: {{ getPlayer.level }}
+          <b-icon @click="addLevel()" icon="file-plus"></b-icon
+          ><b-icon @click="removeLevel()" icon="file-minus"></b-icon>
         </h2>
         <h2>
-          Items: {{ getPlayer.items }} <b-icon icon="file-plus"></b-icon
-          ><b-icon icon="file-minus"></b-icon>
+          Items: {{ getPlayer.items }}
+          <b-icon @click="addItems()" icon="file-plus"></b-icon
+          ><b-icon @click="removeItems()" icon="file-minus"></b-icon>
         </h2>
-        <button>
+        <button @click="changeSex()">
           <b-icon v-if="getPlayer.sex" scale="2" icon="gender-male"></b-icon>
           <b-icon v-else scale="2" icon="gender-female"></b-icon>
         </button>
       </b-card-text>
     </b-card>
+    <button @click="$router.push({ name: 'playersView' })" id="back">
+      <b-icon icon="arrow-left-square-fill" scale="2">Back</b-icon>
+    </button>
   </div>
 </template>
 
@@ -38,5 +43,8 @@ button {
   border: none;
   color: #2c3e50;
   background: white;
+}
+#back {
+  margin: 10px;
 }
 </style>

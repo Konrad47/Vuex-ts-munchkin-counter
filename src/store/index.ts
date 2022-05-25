@@ -1,6 +1,7 @@
 import axios from "axios";
 import Vue from "vue";
 import Vuex from "vuex";
+
 Vue.use(Vuex);
 
 const url = "http://localhost:5001/players";
@@ -8,7 +9,13 @@ const url = "http://localhost:5001/players";
 export default new Vuex.Store({
   state: {
     players: [],
-    player: {},
+    player: {
+      id: 1,
+      name: "",
+      sex: false,
+      items: 0,
+      level: 1,
+    },
   },
   getters: {
     getPlayers: (state) => state.players,
@@ -17,6 +24,11 @@ export default new Vuex.Store({
   mutations: {
     setPlayers: (state, players) => (state.players = players),
     setPlayer: (state, player) => (state.player = player),
+    addLevel: (state) => state.player.level++,
+    removeLevel: (state) => state.player.level--,
+    addItems: (state) => state.player.items++,
+    removeItems: (state) => state.player.items--,
+    changeSex: (state) => (state.player.sex = !state.player.sex),
   },
   actions: {
     async fetchPlayers({ commit }) {

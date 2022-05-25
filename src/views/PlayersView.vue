@@ -37,7 +37,7 @@
 #players {
   display: inline-block;
   margin: 10px;
-  width: 200px;
+  width: 250px;
 }
 a {
   text-decoration: none;
