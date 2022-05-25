@@ -46,6 +46,11 @@
             </b-card-text>
           </b-card>
         </router-link>
+        <b-icon
+          @click="deletePlayer(getPlayers[i].id)"
+          scale="1"
+          icon="x-square"
+        ></b-icon>
       </div>
     </div>
   </div>

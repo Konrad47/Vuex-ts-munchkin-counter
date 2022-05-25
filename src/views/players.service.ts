@@ -28,4 +28,16 @@ export default class PlayersService {
         });
     });
   }
+  public deletePlayer(id: number): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
+      axios
+        .delete(`${url}/${id}`)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
 }

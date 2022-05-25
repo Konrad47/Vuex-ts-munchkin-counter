@@ -33,6 +33,14 @@ export default class PlayersView extends Vue {
       alert("Name cannot be empty");
     }
   }
+  public deletePlayer(id: number) {
+    for (let i = 0; i < this.getPlayers.length; i++) {
+      if (this.getPlayers[i].id == id) {
+        this.playersService().deletePlayer(id);
+        this.getPlayers.splice(i, 1);
+      }
+    }
+  }
 
   showModal() {
     this.myModal.show();
