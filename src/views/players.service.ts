@@ -16,4 +16,16 @@ export default class PlayersService {
         });
     });
   }
+  public addPlayer(player: IPlayer): Promise<IPlayer> {
+    return new Promise<IPlayer>((resolve, reject) => {
+      axios
+        .post(`${url}`, player)
+        .then((res) => {
+          resolve(res.data);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
 }

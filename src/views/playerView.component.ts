@@ -11,14 +11,6 @@ export default class PlayerView extends Vue {
 
   @Inject("playersService") private playersService!: () => PlayersService;
 
-  public player: IPlayer = {
-    id: this.$store.getters.getPlayer.id,
-    name: this.$store.getters.getPlayer.name,
-    sex: this.$store.getters.getPlayer.sex,
-    items: this.$store.getters.getPlayer.items,
-    level: this.$store.getters.getPlayer.level,
-  };
-
   get getPlayer() {
     return this.$store.getters.getPlayer;
   }
